@@ -14,6 +14,20 @@ html{
 a{
     text-decoration: none;
 }
+p{
+    color: black;
+    font-size: 2rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 
 .container{
     min-height: 100vh;
@@ -22,6 +36,8 @@ a{
     align-items: center;
     justify-content: center;
 }
+
+
 
 /*Hero section */
 
@@ -150,7 +166,7 @@ a{
     padding: 100px 0;
 }
 
-#services .section-title{
+.section-title{
     font-size: 4rem;
     font-weight: 300;
     color: black;
@@ -160,22 +176,16 @@ a{
     text-align: center;
 
 }
-#services .section-title spen{
+.section-title span{
     color: green;
 }
 
-#services .services-top p{
-    font-size: 1.rem;
-    margin-top: 5px;
-    line-height: 2.5rem;
-    font-weight: 300;
-    letter-spacing: .05rem;
-}
-.services .services-bottom{
+.services .service-bottom{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 50px;
 }
 
 
@@ -185,13 +195,14 @@ a{
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    pad: 30px;
+    padding: 30px;
     border-radius: 10px;
     background-image: url("./img/img-1.jpg");
     background-size: cover;
     margin:10px 5%;
     position: relative;
     z-index: 1;
+    overflow: hidden;
 }
 
 #services .service-bottom .icon {
@@ -200,7 +211,7 @@ a{
 	margin-bottom: 20px;
 }
 
-#services .service-bottom .icon img{
+ img{
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -208,15 +219,29 @@ a{
 
 
 #services .service-item::after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
-    widows: 100%;
+    width: 100%;
     opacity: .8;
     z-index: -1;
     background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-
+    
 }
+
+#services .service-item h2{
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#services .service-item p {
+    color: darkblue;
+    text-align: left;
+}
+
+
 /* End of sevice section */
