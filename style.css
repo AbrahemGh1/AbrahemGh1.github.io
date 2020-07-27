@@ -82,7 +82,7 @@ img{
     background-color: rgb(31, 30, 30);
     width: 100vw;
     height: 100vh;
-    left: 0;
+    left: 100%;
     top: 0;
     display: flex;
     flex-direction: column;
@@ -91,6 +91,11 @@ img{
     z-index: 1;
     overflow-x: hidden;
     transition: .5s ease left;
+}
+
+
+#header .nav-list ul.active{
+    left: 0%;
 }
 
 #header .nav-list ul a{
@@ -123,6 +128,9 @@ img{
     transform: translate(-50%,-50%) scale(1);
     letter-spacing: initial;
 }
+#header .nav-list ul li:hover a{
+    color: crimson;
+}
 
 #header .hamburger{
     height: 60px;
@@ -136,6 +144,18 @@ img{
     justify-content: center;
     z-index: 100;
     cursor: pointer;
+    transform: scale(.8);
+    margin-right: 20px;
+}
+
+#header .hamburger::after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid white;
+    animation: hamburger_plus 1s ease infinite;
 }
 
 #header .hamburger .bar{
@@ -165,6 +185,15 @@ transition-property: top,bottom;
 #header .hamburger .bar::before{
     bottom: 8px;
 }
+
+#header .hamburger.active .bar::before{
+    top: 0;
+    bottom: 0;
+}
+#header .hamburger.active .bar::after{
+    top: 0;
+}
+
 
 
 
@@ -244,6 +273,18 @@ transition-property: top,bottom;
 /*End Hero section */
 
 /*eyFrames*/
+@keyframes hamburger_plus{
+    0%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1.4);
+    }
+
+
+}
 
 @keyframes text_reveal_box{
     50%{
@@ -272,11 +313,9 @@ transition-property: top,bottom;
 /*end of ey frames*/
 
 /*services section*/
-#services {
-}
 #services .service-top{
-    width: 500px;
-    max-width: 0 auto;
+    max-width: 500px;
+    margin:0 auto;
 
 }
 #services .services {
@@ -524,7 +563,7 @@ transition-property: top,bottom;
 /*End of About section*/
 
 
-/*Comtact section*/
+/*Contact section*/
 #contact .contact{
     flex-direction: column;
     max-width: 1200;
@@ -533,6 +572,7 @@ transition-property: top,bottom;
 
 #contact .contact-items{
     width: 400px;
+    justify-content: space-evenly;
 }
 
 #contact .contact-item{
@@ -742,11 +782,34 @@ transition-property: top,bottom;
 
     /*end of contact section*/
 }
+
 /*End of medai query for tablet*/
 
 /* Media query for Desktop*/
 
 @media only screen and (min-width:1200px) {
+    /* header*/
+    #header .hamburger{
+        display: none;
+    }
+    #header .nav-list ul{
+        position: initial;
+        display: block;
+        height: auto;
+        width: fit-content;
+        background-color: transparent;
+    }
+    #header .nav-list ul li{
+        display: inline-block;
+    }
+    #header .nav-list ul li a{
+        font-size: 1.8rem;
+    }
+    
+    #header .nav-list ul a:after{
+        display: none;
+    }
+    /*end of header*/
     #services .service-bottom .service-item{
         flex-basis:22% ;
         margin: 1.5%;
