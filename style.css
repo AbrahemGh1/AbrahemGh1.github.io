@@ -2,17 +2,24 @@
 
 *{
     padding: 0;
-    margin: 0em;
+    margin: 0;
     box-sizing: border-box;
 }
 
 html{
     font-size: 10px;
     font-family: 'Montserrat', sans-serif;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; 
 }
 a{
     text-decoration: none;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 p{
     color: black;
@@ -29,13 +36,7 @@ img{
     object-fit: cover;
 }
 
-.container{
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 
 .brand h1{
     font-size: 3rem; 
@@ -204,8 +205,8 @@ transition-property: top,bottom;
 /*Hero section */
 
 #hero{
-    background-image: url(./img/Abrahem.jpg);
-    background-size: cover;
+    background-image: url(./img/thumbimg_25361957thumbejpg.jpg);
+    background-size:cover;
     background-position:top center ;
     position: relative;
     z-index: 1;
@@ -220,7 +221,7 @@ transition-property: top,bottom;
     width: 100%;
     background-color: black;
     opacity: .3;
-    z-index: -1s;
+    z-index: -1;
 }
 #hero .hero {
     max-width: 1200px;
@@ -337,7 +338,7 @@ transition-property: top,bottom;
 
 }
 .section-title span{
-    color: green;
+    color: crimson;
 }
 
 .services .service-bottom{
@@ -399,7 +400,7 @@ transition-property: top,bottom;
 }
 
 #services .service-item p {
-    color: darkblue;
+    color: white;
     text-align: left;
 }
 
@@ -619,10 +620,12 @@ transition-property: top,bottom;
 }
 
 #footer .footer {
-    min-height: 200px;
+    min-height: 50px;
     flex-direction: column;
-    padding-top: 50px;
-    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 2px;
+    padding: 10px;
+    
 }
 
 
@@ -630,23 +633,19 @@ transition-property: top,bottom;
 #footer h2{
     color: white;
     font-weight: 500;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     letter-spacing: .1rem;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 
 #footer .social-icon {
 	display: flex;
-	margin-bottom: 30px;
 }
 
 
 #footer .social-item{
-    height: 50px;
-    width: 50px;
-    margin: 5px;
+    height: 40px;
+    width: 40px;
 }
 
 #footer .social-item img{
@@ -660,7 +659,7 @@ transition-property: top,bottom;
 
 #footer p{
     color: white;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 /*End of footer section*/
 
@@ -803,7 +802,7 @@ transition-property: top,bottom;
         display: inline-block;
     }
     #header .nav-list ul li a{
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
     
     #header .nav-list ul a:after{
