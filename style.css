@@ -367,8 +367,8 @@ transition-property: top,bottom;
 }
 
 #services .service-bottom .icon {
-	height: 80px;
-	width: 80px;
+    height: 100px;
+	width: 100px;
 	margin-bottom: 20px;
 }
 
@@ -393,15 +393,18 @@ transition-property: top,bottom;
 }
 
 #services .service-item h2{
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     color: white;
     margin-bottom: 10px;
-    text-transform: uppercase;
+   
+    /*text-transform: uppercase;*/
 }
 
 #services .service-item p {
     color: white;
     text-align: left;
+    letter-spacing: 0.1rem;
+    font-size: 1.5rem;
 }
 
 
