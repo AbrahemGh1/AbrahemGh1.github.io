@@ -497,7 +497,7 @@ transition-property: top,bottom;
     height: 100%;
     width: 100%;
     background-image: linear-gradient(60deg, #29323c 0%,#485563 100%);
-    opacity: .7;
+    opacity: .5;
 }
 
 #projects .project-item:hover .project-img img{
